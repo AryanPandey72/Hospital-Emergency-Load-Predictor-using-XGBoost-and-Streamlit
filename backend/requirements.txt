@@ -1,0 +1,10 @@
+kagglehub
+meteostat
+pytrends
+pandas
+xgboost
+scikit-learn
+streamlit
+plotly
+numpy
+requests
