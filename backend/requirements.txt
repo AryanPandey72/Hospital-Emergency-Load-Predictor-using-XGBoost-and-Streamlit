@@ -8,3 +8,4 @@ streamlit
 plotly
 numpy
 requests
+xgboost
