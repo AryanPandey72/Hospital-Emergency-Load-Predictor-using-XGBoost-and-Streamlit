@@ -50,10 +50,10 @@ def load_models():
 model_volume, model_wait = load_models()
 
 # --- Sidebar Controls ---
-st.sidebar.title("⚙️ Control Panel")
-run_mode = st.sidebar.radio("Operation Mode", ["🎛️ Simulate Manually", "📡 Go Live (Real-Time API)"])
+st.sidebar.title("Control Panel")
+run_mode = st.sidebar.radio("Operation Mode", ["Simulate Manually", "Go Live (Real-Time API)"])
 
-if run_mode == "🎛️ Simulate Manually":
+if run_mode == "Simulate Manually":
     st.sidebar.markdown("Adjust parameters to dynamically influence the ML models.")
     sim_temp = st.sidebar.slider("Current Temperature (°C)", -20.0, 50.0, 15.0, 1.0)
     sim_flu = st.sidebar.slider("Flu Search Index (pytrends)", 0.0, 100.0, 30.0, 5.0)
@@ -118,7 +118,7 @@ else:
 st.title("🏥 Emergency Department Predictor")
 st.markdown("Live machine learning predictions mapping patient inflow and triage strain.")
 
-st.markdown("### 📊 Live Analytics Matrix")
+st.markdown("### Live Analytics Matrix")
 col1, col2, col3 = st.columns(3)
 
 with col1:
@@ -148,7 +148,7 @@ with col3:
     """, unsafe_allow_html=True)
 
 # --- 24-Hour Forecast ---
-st.markdown("### 📈 24-Hour Patient Inflow Horizon")
+st.markdown("### 24-Hour Patient Inflow Horizon")
 
 horizon_hours = 24
 forecast_data = []
@@ -190,7 +190,7 @@ fig.update_yaxes(showgrid=True, gridcolor='rgba(255,255,255,0.1)')
 st.plotly_chart(fig, width='stretch')
 
 # --- Department Breakdown ---
-st.markdown("### 🏥 Departmental Strain Vectors")
+st.markdown("### Departmental Strain Vectors")
 dept_cols = st.columns(3)
 depts = [
     {"name": "Emergency", "mult": 1.2},
